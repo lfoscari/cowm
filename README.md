@@ -42,3 +42,7 @@ patch -p1 < cowm.diff
 - [Cfacts](https://dwm.suckless.org/patches/cfacts/)
 - [EWMH tags](https://dwm.suckless.org/patches/ewmhtags/)
 - [Tile gap](https://dwm.suckless.org/patches/tilegap/)
+
+Created by:
+- [Luigi Foscari](https://github.com/lfoscari)
+- [Michele Ferrante](https://github.com/il-mich)
