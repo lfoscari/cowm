@@ -6,12 +6,32 @@ As of now the whole wm is just a dwm clone with many patches installed, you can 
 patch -p1 < cowm.diff
 ```
 
-#### To do
+#### README to-do
 - [ ] Description
 - [ ] Why use cowm
 - [ ] Installation guide
 - [ ] Configuration and theming
 - [ ] Features
+
+#### Default keys
+- `Mod + (1-9)` switch to a tag
+- `Mod + Shift + (1-9)` move the focused window to tag
+- `Mod + (↑↓)` focus the different windows in the current workspace
+- `Mod + Shift + (↑↓)` change stack window size
+- `Mod + Shift + (←→)` change master horizontal size
+- `Mod + Enter` open a terminal
+- `Mod + Shift + Q` exit cowm
+- `Mod + Q` close the current window
+- `Mod + Shift + R` reload the Xresources
+
+## To implement
+- [ ] Switch tags with arrows
+- [ ] Pick Xresources (with soft-reload)
+- [ ] Up & down bash script
+- [ ] Included bar (like spectrwm)
+
+## To fix
+- [ ] Transparency brigthens the color
 
 ## dwm patches
 - [Alpha](https://dwm.suckless.org/patches/alpha/)
@@ -22,12 +42,3 @@ patch -p1 < cowm.diff
 - [Cfacts](https://dwm.suckless.org/patches/cfacts/)
 - [EWMH tags](https://dwm.suckless.org/patches/ewmhtags/)
 - [Tile gap](https://dwm.suckless.org/patches/tilegap/)
-
-## To implement
-- [ ] Switch tags with arrows
-- [ ] Pick Xresources (with soft-reload)
-- [ ] Up & down bash script
-- [ ] Included bar
-
-## To fix
-- [ ] Transparency brigthens the color
