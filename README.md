@@ -26,12 +26,13 @@ patch -p1 < cowm.diff
 
 ## To implement
 - [ ] Switch tags with arrows
-- [ ] Pick Xresources (with soft-reload)
+- [x] Pick Xresources (with soft-reload)
 - [ ] Up & down bash script
 - [ ] Included bar (like spectrwm)
 
 ## To fix
 - [ ] Transparency brigthens the color
+- [ ] Xresources overwrite the current values, there is no default value option after making at least one change
 
 ## dwm patches
 - [Alpha](https://dwm.suckless.org/patches/alpha/)
