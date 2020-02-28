@@ -1,22 +1,22 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static unsigned int borderpx  = 3;        /* border pixel of windows */
-static unsigned int gappx     = 20;       /* gap pixel between windows */
+static unsigned int borderpx  = 0;        /* border pixel of windows */
+static unsigned int gappx     = 10;       /* gap pixel between windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 
 // Margin
-static int vertpad            = 20;       /* vertical padding of bar */
-static int sidepad            = 20;       /* horizontal padding of bar */
+static int vertpad            = 10;       /* vertical padding of bar */
+static int sidepad            = 10;       /* horizontal padding of bar */
 
 // Padding
-static const int horizpadbar  = 20;        /* horizontal padding for statusbar */
-static const int vertpadbar   = 20;        /* vertical padding for statusbar */
+static const int horizpadbar  = 10;        /* horizontal padding for statusbar */
+static const int vertpadbar   = 10;        /* vertical padding for statusbar */
 
-static const char *fonts[]    = { "Iosevka SS10:style=Regular:size=11:antialias=true:autohint=false" };
-static const char dmenufont[] = "Iosevka SS10:style=Regular:size=11:antialias=true:autohint=false";
+static const char *fonts[]    = { "Iosevka SS10:style=Bold:size=11:antialias=true:autohint=false" };
+static const char dmenufont[] = "Iosevka SS10:style=Bold:size=11:antialias=true:autohint=false";
 
 #define transparent "#000000"
 
@@ -41,8 +41,8 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-static const char *alttags[] = { "1\\", "2\\", "3\\", "4\\", "5\\", "6\\", "7\\", "8\\", "9\\" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
+static const char *alttags[] = { "1.", "2.", "3.", "4.", "5.", "6." };
 
 static const Rule rules[] = {
 	/* xprop(1):

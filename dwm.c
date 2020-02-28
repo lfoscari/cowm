@@ -1106,11 +1106,11 @@ loadxrdb()
 				XRDB_LOAD_INT("COWM.sidepad", sidepad); */
 
 				XRDB_LOAD_COLOR("COWM.norm_bg", norm_bg);
-        		XRDB_LOAD_COLOR("COWM.norm_fg", norm_fg);
+        			XRDB_LOAD_COLOR("COWM.norm_fg", norm_fg);
 				XRDB_LOAD_COLOR("COWM.norm_border", norm_border);
-        		XRDB_LOAD_COLOR("COWM.sel_bg", sel_bg);
-        		XRDB_LOAD_COLOR("COWM.sel_fg", sel_fg);
-        		XRDB_LOAD_COLOR("COWM.sel_border", sel_border);
+        			XRDB_LOAD_COLOR("COWM.sel_bg", sel_bg);
+        			XRDB_LOAD_COLOR("COWM.sel_fg", sel_fg);
+        			XRDB_LOAD_COLOR("COWM.sel_border", sel_border);
 	  		}
 		}
 	}
