@@ -1,21 +1,24 @@
 /* See LICENSE file for copyright and license details. */
 
-#define transparent "#000000"
-#define SchemeUrg 2
-
 /* appearance */
-static unsigned int borderpx  = 0;        /* border pixel of windows */
+static unsigned int borderpx  = 3;        /* border pixel of windows */
 static unsigned int gappx     = 20;       /* gap pixel between windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
+
+// Margin
 static int vertpad            = 20;       /* vertical padding of bar */
 static int sidepad            = 20;       /* horizontal padding of bar */
 
-#define fontfamily "SF Mono:style=Regular:size=7:antialias=true:autohint=false"
+// Padding
+static const int horizpadbar  = 20;        /* horizontal padding for statusbar */
+static const int vertpadbar   = 20;        /* vertical padding for statusbar */
 
-static const char *fonts[]    = { fontfamily };
-static const char dmenufont[] = fontfamily;
+static const char *fonts[]    = { "Iosevka SS10:style=Regular:size=11:antialias=true:autohint=false" };
+static const char dmenufont[] = "Iosevka SS10:style=Regular:size=11:antialias=true:autohint=false";
+
+#define transparent "#000000"
 
 static char norm_fg[] = "#d2dadd";
 static char norm_bg[] = transparent;
@@ -33,8 +36,8 @@ static char *colors[][3]      = {
 
 static const unsigned int alphas[][3] = {
 	/*               fg      bg       border     */
-	[SchemeNorm] = { OPAQUE, ~OPAQUE, ~OPAQUE },
-	[SchemeSel]  = { OPAQUE, ~OPAQUE, ~OPAQUE },
+	[SchemeNorm] = { OPAQUE, OPAQUE, OPAQUE },
+	[SchemeSel]  = { OPAQUE, OPAQUE, OPAQUE },
 };
 
 /* tagging */
@@ -64,7 +67,7 @@ static const Layout layouts[] = {
 
 #define LEFT 	0xff51
 #define RIGHT	0xff53
-#define UP		0xff52
+#define UP	0xff52
 #define DOWN	0xff54
 
 /* key definitions */
@@ -84,7 +87,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL};
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "urxvt", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
