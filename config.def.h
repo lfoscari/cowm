@@ -81,12 +81,12 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL};
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
-    { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+    { MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       DOWN,      focusstack,     {.i = +1 } },
