@@ -1,10 +1,5 @@
 ### cowm
-A fork of dwm designed to be easier to use, EWMH compliant and themable like [LeftWM](https://github.com/leftwm/leftwm).
-
-As of now the whole wm is just a dwm clone with many patches installed, you can try it with the command
-```bash
-patch -p1 < cowm.diff
-```
+A fork of [dwm](https://dwm.suckless.org/) designed to be easier to use, EWMH compliant and themable like [LeftWM](https://github.com/leftwm/leftwm).
 
 #### README to-do
 - [ ] Description
@@ -20,9 +15,9 @@ patch -p1 < cowm.diff
 - `Mod + Shift + (↑↓)` change stack window size
 - `Mod + Shift + (←→)` change master horizontal size
 - `Mod + Enter` open a terminal
-- `Mod + Shift + Q` exit cowm
-- `Mod + Q` close the current window
-- `Mod + Shift + R` reload the Xresources
+- `Mod + q` close the current window
+- `Mod + Shift + r` reload the Xresources
+- `Mod + Shift + q` exit cowm
 
 ## To implement
 - [ ] Switch tags with arrows
@@ -33,6 +28,7 @@ patch -p1 < cowm.diff
 ## To fix
 - [ ] Transparency brigthens the color
 - [ ] Xresources overwrite the current values, there is no default value option after making at least one change
+- [ ] `Mod + Shift + Enter` doesn't move window to/from stack
 
 ## dwm patches
 - [Alpha](https://dwm.suckless.org/patches/alpha/)

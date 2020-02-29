@@ -1,13 +1,14 @@
-.TH DWM 1 dwm\-VERSION
+.TH COWM 1 cowm\-VERSION
 .SH NAME
-dwm \- dynamic window manager
+cowm \- A tiling window manager for farmers and peasants
 .SH SYNOPSIS
-.B dwm
+.B cowm
 .RB [ \-v ]
 .SH DESCRIPTION
-dwm is a dynamic window manager for X. It manages windows in tiled, monocle
-and floating layouts. Either layout can be applied dynamically, optimising the
-environment for the application in use and the task performed.
+cowm, like its parent dwm, is a dynamic window manager for X. It manages
+windows in tiled, monocle and floating layouts. Either layout can be applied
+dynamically, optimising the environment for the application in use and the task
+performed.
 .P
 In tiled layouts windows are managed in a master and stacking area. The master
 area on the left contains one window by default, and the stacking area on the
@@ -24,12 +25,12 @@ Each screen contains a small status bar which displays all available tags, the
 layout, the title of the focused window, and the text read from the root window
 name property, if the screen is focused. A floating window is indicated with an
 empty square and a maximised floating window is indicated with a filled square
-before the windows title.  The selected tags are indicated with a different
+before the windows title. The selected tags are indicated with a different
 color. The tags of the focused window are indicated with a filled square in the
-top left corner.  The tags which are applied to one or more windows are
+top left corner. The tags which are applied to one or more windows are
 indicated with an empty square in the top left corner.
 .P
-dwm draws a small border around windows to indicate the focus state.
+cowm draws a small border around windows to indicate the focus state.
 .SH OPTIONS
 .TP
 .B \-v
@@ -49,115 +50,128 @@ label toggles between tiled and floating layout.
 .B Button3
 click on a tag label adds/removes all windows with that tag to/from the view.
 .TP
-.B Mod1\-Button1
+.B Mod\-Button1
 click on a tag label applies that tag to the focused window.
 .TP
-.B Mod1\-Button3
+.B Mod\-Button3
 click on a tag label adds/removes that tag to/from the focused window.
 .SS Keyboard commands
 .TP
-.B Mod1\-Shift\-Return
-Start
-.BR st(1).
+.B Mod\-Return
+Start default terminal, in this case
+.BR urxvt(1).
 .TP
-.B Mod1\-p
-Spawn
-.BR dmenu(1)
-for launching other programs.
+.B Mod\-space
+Spawn default program launcher, in this case
+.BR dmenu(1).
 .TP
-.B Mod1\-,
+.B Mod\-,
 Focus previous screen, if any.
 .TP
-.B Mod1\-.
+.B Mod\-.
 Focus next screen, if any.
 .TP
-.B Mod1\-Shift\-,
+.B Mod\-Shift\-,
 Send focused window to previous screen, if any.
 .TP
-.B Mod1\-Shift\-.
+.B Mod\-Shift\-.
 Send focused window to next screen, if any.
 .TP
-.B Mod1\-b
+.B Mod\-b
 Toggles bar on and off.
 .TP
-.B Mod1\-t
+.B Mod\-t
 Sets tiled layout.
 .TP
-.B Mod1\-f
+.B Mod\-f
 Sets floating layout.
 .TP
-.B Mod1\-m
+.B Mod\-m
 Sets monocle layout.
 .TP
-.B Mod1\-space
+.B Mod\-l
 Toggles between current and previous layout.
 .TP
-.B Mod1\-j
+.B Mod\-Up
 Focus next window.
 .TP
-.B Mod1\-k
+.B Mod\-Down
 Focus previous window.
 .TP
-.B Mod1\-i
+.B Mod\-i
 Increase number of windows in master area.
 .TP
-.B Mod1\-d
+.B Mod\-d
 Decrease number of windows in master area.
 .TP
-.B Mod1\-l
-Increase master area size.
+.B Mod\-Shift\-Right
+Move the internal border of the focused window to the right.
 .TP
-.B Mod1\-h
-Decrease master area size.
+.B Mod\-Shift\-Left
+Move the internal border of the focused window to the left.
+//.TP
+//.B Mod\-Shift\-Return
+//Zooms/cycles focused window to/from master area (tiled layouts only).
 .TP
-.B Mod1\-Return
-Zooms/cycles focused window to/from master area (tiled layouts only).
-.TP
-.B Mod1\-Shift\-c
+.B Mod\-q
 Close focused window.
 .TP
-.B Mod1\-Shift\-space
+.B Mod\-Shift\-space
 Toggle focused window between tiled and floating state.
 .TP
-.B Mod1\-Tab
+.B Mod\-Tab
 Toggles to the previously selected tags.
 .TP
-.B Mod1\-Shift\-[1..n]
+.B Mod\-Shift\-[1..n]
 Apply nth tag to focused window.
 .TP
-.B Mod1\-Shift\-0
+.B Mod\-Shift\-0
 Apply all tags to focused window.
 .TP
-.B Mod1\-Control\-Shift\-[1..n]
+.B Mod\-Control\-Shift\-[1..n]
 Add/remove nth tag to/from focused window.
 .TP
-.B Mod1\-[1..n]
+.B Mod\-[1..n]
 View all windows with nth tag.
 .TP
-.B Mod1\-0
+.B Mod\-0
 View all windows with any tag.
 .TP
-.B Mod1\-Control\-[1..n]
+.B Mod\-Control\-[1..n]
 Add/remove all windows with nth tag to/from the view.
 .TP
-.B Mod1\-Shift\-q
-Quit dwm.
+.B Mod\-Shift\-r
+Reload values from global Xresources.
+.TP
+.B Mod\-Shift\-q
+Quit cowm.
 .SS Mouse commands
 .TP
-.B Mod1\-Button1
+.B Mod\-Button1
 Move focused window while dragging. Tiled windows will be toggled to the floating state.
 .TP
-.B Mod1\-Button2
+.B Mod\-Button2
 Toggles focused window between floating and tiled state.
 .TP
-.B Mod1\-Button3
+.B Mod\-Button3
 Resize focused window while dragging. Tiled windows will be toggled to the floating state.
 .SH CUSTOMIZATION
-dwm is customized by creating a custom config.h and (re)compiling the source
-code. This keeps it fast, secure and simple.
+.SS Appearance
+cowm is customized by adding the following color varibles to the Xresources and reloading the wm.
+.TP
+.B cowm.norm_bg - cowm.norm_fg - cowm.norm_border
+Hexadecimal colors for background, foreground and border of normal elements.
+Default values are respectively: #000000, #FFFFFF, #000000.
+.TP
+.B cowm.sel_bg - cowm.sel_fg - cowm.sel_border
+Hexadecimal colors for background, foreground and border of selected elements.
+Default values are respectively: #FFFFFF, #000000, #000000.
+.SS Keybindings
+Customization is done by creating a custom config.h and (re)compiling the source
+code as in dwm.
 .SH SEE ALSO
 .BR dmenu (1),
-.BR st (1)
+.BR urxvt (1)
 .SH ISSUES
 Java applications which use the XToolkit/XAWT backend may draw grey windows
 only. The XToolkit/XAWT backend breaks ICCCM-compliance in recent JDK 1.5 and early
@@ -172,5 +186,3 @@ or
 (to pretend that a non-reparenting window manager is running that the
 XToolkit/XAWT backend can recognize) or when using OpenJDK setting the environment variable
 .BR _JAVA_AWT_WM_NONREPARENTING=1 .
-.SH BUGS
-Send all bug reports with a patch to hackers@suckless.org.
