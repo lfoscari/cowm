@@ -35,7 +35,6 @@ A fork of [dwm](https://dwm.suckless.org/) designed to be easier to use, EWMH co
 - [Alternative tags decoration](https://dwm.suckless.org/patches/alttagsdecoration/)
 - [Autostart](https://dwm.suckless.org/patches/autostart/) (theming)
 - [Bar padding](https://dwm.suckless.org/patches/barpadding/)
-- [Centered window name](https://dwm.suckless.org/patches/centeredwindowname/)
 - [Cfacts](https://dwm.suckless.org/patches/cfacts/)
 - [EWMH tags](https://dwm.suckless.org/patches/ewmhtags/)
 - [Tile gap](https://dwm.suckless.org/patches/tilegap/)
