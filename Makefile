@@ -25,6 +25,10 @@ config.h:
 cowm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
+# Before push
+prep:
+	rm -f config.h cowm ${OBJ} cowm-${VERSION}.tar.gz
+
 clean:
 	rm -f cowm ${OBJ} cowm-${VERSION}.tar.gz
 
