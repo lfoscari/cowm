@@ -8,12 +8,12 @@ static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 
 // Margin
-static int vertpad            = 10;       /* vertical padding of bar */
-static int sidepad            = 10;       /* horizontal padding of bar */
+static const int vertmargin   = 10;       /* vertical margin of bar */
+static const int sidemargin   = 10;       /* horizontal margin of bar */
 
 // Padding
-static const int horizpadbar  = 10;        /* horizontal padding for statusbar */
-static const int vertpadbar   = 10;        /* vertical padding for statusbar */
+static const int vertpadding  = 10;        /* vertical padding of bar */
+static const int sidepadding  = 10;        /* horizontal padding of bar */
 
 static const char *fonts[]    = { "Iosevka SS10:style=Bold:size=11:antialias=true:autohint=false" };
 static const char dmenufont[] = "Iosevka SS10:style=Bold:size=11:antialias=true:autohint=false";

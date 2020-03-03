@@ -1101,8 +1101,8 @@ loadxrdb()
 				XRDB_LOAD_INT("cowm.snap", snap);
 				XRDB_LOAD_INT("cowm.showbar", showbar);
 				XRDB_LOAD_INT("cowm.topbar", topbar);
-				XRDB_LOAD_INT("cowm.vertpad", vertpad);
-				XRDB_LOAD_INT("cowm.sidepad", sidepad); */
+				XRDB_LOAD_INT("cowm.vertmargin", vertmargin);
+				XRDB_LOAD_INT("cowm.sidemargin", sidemargin); */
 
 				XRDB_LOAD_COLOR("cowm.norm_bg", norm_bg);
         		XRDB_LOAD_COLOR("cowm.norm_fg", norm_fg);
@@ -1704,11 +1704,11 @@ setup(void)
 	drw = drw_create(dpy, screen, root, sw, sh, visual, depth, cmap);
 	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
 		die("no fonts could be loaded.");
-	lrpad = drw->fonts->h + horizpadbar;
-	bh = drw->fonts->h + vertpadbar;
+	lrpad = drw->fonts->h + sidepadding;
+	bh = drw->fonts->h + vertpadding;
 	updategeom();
-	sp = sidepad;
-	vp = (topbar == 1) ? vertpad : - vertpad;
+	sp = sidemargin;
+	vp = (topbar == 1) ? vertmargin : - vertmargin;
 
 	/* init atoms */
 	utf8string = XInternAtom(dpy, "UTF8_STRING", False);
@@ -2020,8 +2020,8 @@ updatebarpos(Monitor *m)
 	m->wy = m->my;
 	m->wh = m->mh;
 	if (m->showbar) {
-		m->wh = m->wh - vertpad - bh;
-		m->by = m->topbar ? m->wy : m->wy + m->wh + vertpad;
+		m->wh = m->wh - vertmargin - bh;
+		m->by = m->topbar ? m->wy : m->wy + m->wh + vertmargin;
 		m->wy = m->topbar ? m->wy + bh + vp : m->wy;
 	} else
 		m->by = -bh - vp;
