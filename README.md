@@ -1,12 +1,30 @@
-### cowm
-A fork of [dwm](https://dwm.suckless.org/) designed to be easier to use, EWMH compliant and themable like [LeftWM](https://github.com/leftwm/leftwm).
+Cowm is a dynamic tiling window manager for X and a fork of [dwm](https://dwm.suckless.org/), is designed to be easy to use, EWMH compliant and themable like [LeftWM](https://github.com/leftwm/leftwm).
 
-#### README to-do
-- [ ] Description
-- [ ] Why use cowm
-- [ ] Installation guide
-- [ ] Configuration and theming
-- [ ] Features
+The changes from dwm have been made around the idea of easy and quick personalization. The goal is to create a version of dwm entirely customizable via X resources and that can be easily used with tools like [polybar](https://github.com/polybar/polybar). There are plenty of window managers out there that meet these requirements, but we really like dwm and wanted to work from there.
+
+The [dwm patches](https://dwm.suckless.org/patches/) cannot be directly applied, but are quite easy to implement by hand.
+
+## Getting started
+The installation process is identical to dwm's. Clone the repo, navigate to the directory and install using `make`.
+```bash
+git clone https://github.com/lfoscari/cowm
+cd cowm
+sudo make install
+```
+After compilig for the first time a `config.h` file is createid, this is the applied configuration file. If anything breaks, just delete `config.h` and recompile.
+
+## Theming
+Thanks to the magic of X resources in cowm is possible to change some values while running, more options are coming soon. The values currently updatable via `~/.Xresources` are:
+```
+! COWM
+cowm.norm_fg: #FFFFFF
+cowm.norm_bg: #000000
+cowm.norm_border: #000000
+
+cowm.sel_fg: #000000
+cowm.sel_bg: #FFFFFF
+cowm.sel_border: #000000
+```
 
 #### Default keys
 - `Mod + (1-9)` switch to a tag
