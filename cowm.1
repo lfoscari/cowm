@@ -109,9 +109,9 @@ Move the internal border of the focused window to the right.
 .TP
 .B Mod\-Shift\-Left
 Move the internal border of the focused window to the left.
-//.TP
-//.B Mod\-Shift\-Return
-//Zooms/cycles focused window to/from master area (tiled layouts only).
+.TP
+.B Mod\-Shift\-Return
+Zooms/cycles focused window to/from master area (tiled layouts only).
 .TP
 .B Mod\-q
 Close focused window.
@@ -161,10 +161,12 @@ cowm is customized by adding the following color varibles to the Xresources and 
 .TP
 .B cowm.norm_bg - cowm.norm_fg - cowm.norm_border
 Hexadecimal colors for background, foreground and border of normal elements.
+.br
 Default values are respectively: #000000, #FFFFFF, #000000.
 .TP
 .B cowm.sel_bg - cowm.sel_fg - cowm.sel_border
 Hexadecimal colors for background, foreground and border of selected elements.
+.br
 Default values are respectively: #FFFFFF, #000000, #000000.
 .SS Keybindings
 Customization is done by creating a custom config.h and (re)compiling the source
