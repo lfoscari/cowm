@@ -38,6 +38,7 @@ config.h
 *.i*86
 *.x86_64
 *.hex
+cowm
 
 # Debug files
 *.dSYM/
